@@ -49,19 +49,20 @@ You can change it to:
 
 Users can toggle between light and dark themes using the theme toggle button in the navigation bar. The preference is saved in localStorage.
 
-### Update Personal Information
+### Update Personal Information and Projects
 
-Edit `app/page.tsx` to update:
+All personal information and projects are centralized in `lib/site-config.ts`. Edit this file to update:
 - Name and title
-- Social media links (GitHub, LinkedIn, Facebook, Email)
-- About section
-- Skills
+- Profile image path
+- Email
+- Social media links (GitHub, LinkedIn, Facebook)
+- About/Summary section
+- Skills (languages and frameworks)
 - Experience
 - Education
+- Projects
 
-### Update Projects
-
-Edit `app/projects/page.tsx` to add or modify your projects.
+This centralized configuration makes it easy to manage all your portfolio content in one place.
 
 ## Build for Production
 
