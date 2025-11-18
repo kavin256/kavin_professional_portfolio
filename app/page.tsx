@@ -1,0 +1,129 @@
+import Image from 'next/image'
+import { Github, Linkedin, Facebook, Mail } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import { siteConfig } from '@/lib/site-config'
+
+export default function About() {
+  return (
+    <div className="max-w-4xl mx-auto px-6 py-12">
+      {/* Header Section */}
+      <div className="text-center mb-12">
+        <div className="flex justify-center mb-6">
+          <div className="relative w-32 h-32 md:w-40 md:h-40">
+            <Image
+              src={siteConfig.profileImage}
+              alt="Profile Picture"
+              fill
+              className="rounded-full object-cover border-4 border-primary/20 shadow-lg"
+              priority
+            />
+          </div>
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          {siteConfig.name}
+        </h1>
+        <p className="text-xl text-muted-foreground mb-6">
+          {siteConfig.title}
+        </p>
+
+        {/* Social Links */}
+        <div className="flex justify-center gap-6">
+          <a
+            href={siteConfig.socialLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="GitHub"
+          >
+            <Github className="w-6 h-6" />
+          </a>
+          <a
+            href={siteConfig.socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-6 h-6" />
+          </a>
+          <a
+            href={siteConfig.socialLinks.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Facebook"
+          >
+            <Facebook className="w-6 h-6" />
+          </a>
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Email"
+          >
+            <Mail className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+
+      {/* Summary Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-4">About</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          {siteConfig.summary}
+        </p>
+      </section>
+
+      {/* Skills Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-4">Skills</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-lg font-semibold text-foreground mb-3">Languages</h3>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.skills.languages.map((skill, index) => (
+                <Badge key={index}>{skill}</Badge>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-foreground mb-3">Frameworks & Tools</h3>
+            <div className="flex flex-wrap gap-2">
+              {siteConfig.skills.frameworks.map((skill, index) => (
+                <Badge key={index}>{skill}</Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-4">Experience</h2>
+        <div className="space-y-6">
+          {siteConfig.experience.map((job, index) => (
+            <div key={index}>
+              <h3 className="text-lg font-semibold text-foreground">{job.title}</h3>
+              <p className="text-muted-foreground mb-2">{job.company} | {job.period}</p>
+              <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                {job.achievements.map((achievement, achIndex) => (
+                  <li key={achIndex}>{achievement}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-4">Education</h2>
+        <div>
+          <h3 className="text-lg font-semibold text-foreground">{siteConfig.education.degree}</h3>
+          <p className="text-muted-foreground mb-2">{siteConfig.education.institution} | {siteConfig.education.period}</p>
+          <p className="text-muted-foreground">{siteConfig.education.details}</p>
+        </div>
+      </section>
+    </div>
+  )
+}
+
