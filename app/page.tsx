@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Github, Linkedin, Facebook, Mail } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
-import { siteConfig } from '@/lib/site-config'
+import { siteConfig } from '@/lib/config/site-config'
 
 export default function About() {
   return (
@@ -19,12 +19,8 @@ export default function About() {
             />
           </div>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-          {siteConfig.name}
-        </h1>
-        <p className="text-xl text-muted-foreground mb-6">
-          {siteConfig.title}
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{siteConfig.name}</h1>
+        <p className="text-xl text-muted-foreground mb-6">{siteConfig.title}</p>
 
         {/* Social Links */}
         <div className="flex justify-center gap-6">
@@ -68,9 +64,7 @@ export default function About() {
       {/* Summary Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">About</h2>
-        <p className="text-muted-foreground leading-relaxed">
-          {siteConfig.summary}
-        </p>
+        <p className="text-muted-foreground leading-relaxed">{siteConfig.summary}</p>
       </section>
 
       {/* Skills Section */}
@@ -103,7 +97,9 @@ export default function About() {
           {siteConfig.experience.map((job, index) => (
             <div key={index}>
               <h3 className="text-lg font-semibold text-foreground">{job.title}</h3>
-              <p className="text-muted-foreground mb-2">{job.company} | {job.period}</p>
+              <p className="text-muted-foreground mb-2">
+                {job.company} | {job.period}
+              </p>
               <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                 {job.achievements.map((achievement, achIndex) => (
                   <li key={achIndex}>{achievement}</li>
@@ -119,11 +115,12 @@ export default function About() {
         <h2 className="text-2xl font-bold text-foreground mb-4">Education</h2>
         <div>
           <h3 className="text-lg font-semibold text-foreground">{siteConfig.education.degree}</h3>
-          <p className="text-muted-foreground mb-2">{siteConfig.education.institution} | {siteConfig.education.period}</p>
+          <p className="text-muted-foreground mb-2">
+            {siteConfig.education.institution} | {siteConfig.education.period}
+          </p>
           <p className="text-muted-foreground">{siteConfig.education.details}</p>
         </div>
       </section>
     </div>
   )
 }
-

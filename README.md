@@ -43,6 +43,7 @@ export const defaultTheme: 'light' | 'dark' | 'system' = 'dark'
 ```
 
 You can change it to:
+
 - `'dark'` - Dark theme (default)
 - `'light'` - Light theme
 - `'system'` - Follows system preference
@@ -52,6 +53,7 @@ Users can toggle between light and dark themes using the theme toggle button in 
 ### Update Personal Information and Projects
 
 All personal information and projects are centralized in `lib/site-config.ts`. Edit this file to update:
+
 - Name and title
 - Profile image path
 - Email
@@ -79,4 +81,3 @@ npm start
 - **React 18** - UI library
 - **shadcn/ui** - UI component library
 - **Lucide React** - Icon library
-

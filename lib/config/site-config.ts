@@ -1,10 +1,13 @@
-export const siteConfig = {
+import type { SiteConfig } from '@/types'
+
+export const siteConfig: SiteConfig = {
   name: 'John Doe',
   title: 'Software Engineer',
   email: 'john.doe@example.com',
   profileImage: '/profile-pic.jpg',
 
-  summary: 'Passionate software engineer with expertise in building scalable web applications and solving complex technical challenges. Experienced in full-stack development with a focus on modern technologies and best practices.',
+  summary:
+    'Passionate software engineer with expertise in building scalable web applications and solving complex technical challenges. Experienced in full-stack development with a focus on modern technologies and best practices.',
 
   socialLinks: {
     github: 'https://github.com',
@@ -13,18 +16,8 @@ export const siteConfig = {
   },
 
   skills: {
-    languages: [
-      'JavaScript / TypeScript',
-      'Python',
-      'Java',
-      'Go',
-    ],
-    frameworks: [
-      'React / Next.js',
-      'Node.js',
-      'Docker',
-      'Git',
-    ],
+    languages: ['JavaScript / TypeScript', 'Python', 'Java', 'Go'],
+    frameworks: ['React / Next.js', 'Node.js', 'Docker', 'Git'],
   },
 
   experience: [
@@ -60,25 +53,27 @@ export const siteConfig = {
   projects: [
     {
       title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with Next.js and Node.js. Features include user authentication, payment processing, and inventory management.',
+      description:
+        'A full-stack e-commerce platform built with Next.js and Node.js. Features include user authentication, payment processing, and inventory management.',
       technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
     },
     {
       title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates. Built using React and WebSockets for seamless collaboration.',
+      description:
+        'A collaborative task management application with real-time updates. Built using React and WebSockets for seamless collaboration.',
       technologies: ['React', 'WebSockets', 'MongoDB', 'Express'],
     },
     {
       title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard that displays current conditions and forecasts. Integrates with multiple weather APIs.',
+      description:
+        'A responsive weather dashboard that displays current conditions and forecasts. Integrates with multiple weather APIs.',
       technologies: ['React', 'TypeScript', 'Chart.js', 'REST APIs'],
     },
     {
       title: 'Social Media Analytics Tool',
-      description: 'Analytics dashboard for tracking social media metrics across multiple platforms. Features data visualization and export capabilities.',
+      description:
+        'Analytics dashboard for tracking social media metrics across multiple platforms. Features data visualization and export capabilities.',
       technologies: ['Python', 'Django', 'React', 'D3.js'],
     },
   ],
 }
-
-export type SiteConfig = typeof siteConfig

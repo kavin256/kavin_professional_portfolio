@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { Moon, Sun } from 'lucide-react'
-import { useTheme } from '@/components/theme-provider'
+import { useTheme } from '@/components/features/theme-provider'
 import { Button } from '@/components/ui/button'
 
 export function ThemeToggle() {
@@ -16,7 +16,11 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="h-9 w-9 rounded-md hover:bg-accent/50 transition-colors">
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-9 w-9 rounded-md hover:bg-accent/50 transition-colors"
+      >
         <Sun className="h-4 w-4" />
         <span className="sr-only">Toggle theme</span>
       </Button>
@@ -48,4 +52,3 @@ export function ThemeToggle() {
     </Button>
   )
 }
-

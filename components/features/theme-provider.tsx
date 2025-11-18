@@ -1,20 +1,8 @@
 'use client'
 
 import * as React from 'react'
-import { defaultTheme, THEME_STORAGE_KEY } from '@/lib/theme-config'
-
-type Theme = 'dark' | 'light' | 'system'
-
-type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
-  storageKey?: string
-}
-
-type ThemeProviderState = {
-  theme: Theme
-  setTheme: (theme: Theme) => void
-}
+import { defaultTheme, THEME_STORAGE_KEY } from '@/lib/config/theme-config'
+import type { Theme, ThemeProviderProps, ThemeProviderState } from '@/types'
 
 const initialState: ThemeProviderState = {
   theme: defaultTheme,
@@ -47,8 +35,7 @@ export function ThemeProvider({
     root.classList.remove('light', 'dark')
 
     if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light'
       root.classList.add(systemTheme)
@@ -58,12 +45,15 @@ export function ThemeProvider({
     root.classList.add(theme)
   }, [theme, mounted])
 
-  const handleSetTheme = React.useCallback((newTheme: Theme) => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(storageKey, newTheme)
-    }
-    setTheme(newTheme)
-  }, [storageKey])
+  const handleSetTheme = React.useCallback(
+    (newTheme: Theme) => {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(storageKey, newTheme)
+      }
+      setTheme(newTheme)
+    },
+    [storageKey]
+  )
 
   const value = {
     theme,
@@ -80,9 +70,7 @@ export function ThemeProvider({
 export const useTheme = () => {
   const context = React.useContext(ThemeProviderContext)
 
-  if (context === undefined)
-    throw new Error('useTheme must be used within a ThemeProvider')
+  if (context === undefined) throw new Error('useTheme must be used within a ThemeProvider')
 
   return context
 }
-

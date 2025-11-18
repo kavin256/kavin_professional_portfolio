@@ -70,9 +70,16 @@
     background-attachment: fixed;
     min-height: 100vh;
   }
-  
+
   html:not(.dark) body {
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 25%, #93c5fd 50%, #60a5fa 75%, #3b82f6 100%);
+    background: linear-gradient(
+      135deg,
+      #dbeafe 0%,
+      #bfdbfe 25%,
+      #93c5fd 50%,
+      #60a5fa 75%,
+      #3b82f6 100%
+    );
     background-attachment: fixed;
   }
 }
@@ -82,4 +89,3 @@
     text-wrap: balance;
   }
 }
-
