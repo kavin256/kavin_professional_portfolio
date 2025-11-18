@@ -1,4 +1,4 @@
-# Software Engineer Portfolio
+# Software Engineering Portfolio
 
 A modern, clean portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
