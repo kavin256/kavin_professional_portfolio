@@ -1,18 +1,18 @@
 import type { SiteConfig } from '@/types'
 
 export const siteConfig: SiteConfig = {
-  name: 'John Doe',
-  title: 'Software Engineer',
-  email: 'john.doe@example.com',
+  name: 'Kavin Ranawella',
+  title: 'Full Stack Engineer',
+  email: 'kavin256@gmail.com',
   profileImage: '/profile-pic.jpg',
 
   summary:
     'Passionate software engineer with expertise in building scalable web applications and solving complex technical challenges. Experienced in full-stack development with a focus on modern technologies and best practices.',
 
   socialLinks: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    facebook: 'https://facebook.com',
+    github: 'https://github.com/kavin256',
+    linkedin: 'https://www.linkedin.com/in/kavin-ranawella/',
+    facebook: 'https://www.facebook.com/kavin.ranawella',
   },
 
   skills: {
