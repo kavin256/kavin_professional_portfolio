@@ -10,6 +10,7 @@ node_modules
 /.next/
 /out/
 next-env.d.ts
+<<<<<<< HEAD
 
 # Production
 /build
@@ -49,3 +50,6 @@ yarn-error.log*
 
 # OS
 Thumbs.db
+=======
+.env*
+>>>>>>> 34e1a1a67bc90a97c0bdb4a5aa0326d19fa906c2
