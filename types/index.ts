@@ -46,7 +46,7 @@ export interface SiteConfig {
   socialLinks: SocialLinks
   skills: Skills
   experience: Experience[]
-  education: Education
+  education: Education[]
   projects: Project[]
 }
 

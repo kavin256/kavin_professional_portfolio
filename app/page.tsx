@@ -113,12 +113,16 @@ export default function About() {
       {/* Education Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">Education</h2>
-        <div>
-          <h3 className="text-lg font-semibold text-foreground">{siteConfig.education.degree}</h3>
-          <p className="text-muted-foreground mb-2">
-            {siteConfig.education.institution} | {siteConfig.education.period}
-          </p>
-          <p className="text-muted-foreground">{siteConfig.education.details}</p>
+        <div className="space-y-6">
+          {siteConfig.education.map((edu, index) => (
+            <div key={index}>
+              <h3 className="text-lg font-semibold text-foreground">{edu.degree}</h3>
+              <p className="text-muted-foreground mb-2">
+                {edu.institution} | {edu.period}
+              </p>
+              <p className="text-muted-foreground">{edu.details}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>

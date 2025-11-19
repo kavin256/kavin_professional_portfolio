@@ -2,12 +2,12 @@ import type { SiteConfig } from '@/types'
 
 export const siteConfig: SiteConfig = {
   name: 'Kavin Ranawella',
-  title: 'Full Stack Engineer',
+  title: 'Senior Full Stack Engineer',
   email: 'kavin256@gmail.com',
   profileImage: '/profile-pic.jpg',
 
   summary:
-    'Passionate software engineer with expertise in building scalable web applications and solving complex technical challenges. Experienced in full-stack development with a focus on modern technologies and best practices.',
+    'Senior Software Engineer with 6+ years of experience designing and delivering scalable, high-performance applications across FinTech, Open Banking, and SaaS. Skilled in building robust backend services, cloud-native architectures, and modern front-end solutions.',
 
   socialLinks: {
     github: 'https://github.com/kavin256',
@@ -16,39 +16,68 @@ export const siteConfig: SiteConfig = {
   },
 
   skills: {
-    languages: ['JavaScript / TypeScript', 'Python', 'Java', 'Go'],
-    frameworks: ['React / Next.js', 'Node.js', 'Docker', 'Git'],
+    languages: ['Java', 'TypeScript', 'JavaScript', 'Python'],
+    frameworks: ['React / React Native', 'Angular', 'Spring Boot', 'Node.js', 'Express.js', 'AWS (Lambda, EC2, S3)', 'Docker', 'Terraform'],
   },
 
   experience: [
     {
-      title: 'Senior Software Engineer',
-      company: 'Tech Company Inc.',
-      period: '2021 - Present',
+      title: 'Senior Full Stack Engineer',
+      company: 'Memaree Ventures',
+      period: 'Jan 2023 - Present',
       achievements: [
-        'Led development of microservices architecture serving 1M+ users',
-        'Improved application performance by 40% through optimization',
-        'Mentored junior developers and conducted code reviews',
+        'Led development of "Scenes" feature using React Native, securing the company\'s first $120K investment',
+        'Replaced monolithic API layers with AWS Lambda and S3, reducing latency by 30%',
+        'Optimized image rendering with lazy loading, cutting initial load times from 2s to 0.5s',
+        'Automated AWS resource provisioning using Terraform and CloudFormation, reducing manual deployment by 90%',
+        'Mentored junior developers in RESTful API best practices, reducing backend integration bugs by 25%',
       ],
     },
     {
-      title: 'Software Engineer',
-      company: 'StartupXYZ',
-      period: '2019 - 2021',
+      title: 'Senior Customer Success Engineer',
+      company: 'WSO2 Inc.',
+      period: 'Aug 2021 - Sep 2022',
       achievements: [
-        'Developed and maintained React-based web applications',
-        'Collaborated with cross-functional teams to deliver features',
-        'Implemented CI/CD pipelines for automated deployments',
+        'Secured a $100K+ customer by leading product deployment of WSO2 API Manager software',
+        'Led a team of 8 engineers in Germany, deploying WSO2 products across diverse server environments',
+        'Developed PSD2-compliant APIs using Java/Spring Boot, driving customer adoption of open banking services',
+        'Enhanced authentication workflows with OAuth2.0/OIDC protocols, reducing security breaches by 5%',
+        'Integrated Berlin Group standards into core APIs, accelerating regulatory certification for 10+ Tier-1 financial institutions',
+      ],
+    },
+    {
+      title: 'Fullstack Software Engineer',
+      company: 'CodeGen International',
+      period: 'Mar 2019 - Aug 2021',
+      achievements: [
+        'Optimized 6 RESTful API endpoints, leading to a 60% increase in UI rendering performance',
+        'Developed user and payment management features using Okta, ensuring compliance with Australian data privacy regulations',
+        'Implemented API documentation using Swagger, reducing cross-team integration tickets by 50%',
+        'Conducted unit testing with JUnit and leveraged Splunk for log monitoring to ensure service quality',
       ],
     },
   ],
 
-  education: {
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'University Name',
-    period: '2015 - 2019',
-    details: 'Relevant coursework: Data Structures, Algorithms, Software Engineering',
-  },
+  education: [
+    {
+      degree: 'PG Certificate in Mobile Application Development',
+      institution: 'Fanshawe College, Canada',
+      period: '2022 - 2023',
+      details: 'Focused on modern mobile application development practices and technologies',
+    },
+    {
+      degree: 'Masters of Business Administration',
+      institution: 'University of Wolverhampton, UK',
+      period: '2019 - 2021',
+      details: 'Business management and strategic leadership',
+    },
+    {
+      degree: 'BSc (Hons) in Computer Engineering',
+      institution: 'University of Peradeniya, Sri Lanka',
+      period: '2014 - 2018',
+      details: 'Comprehensive study in computer engineering, software development, and algorithms',
+    },
+  ],
 
   projects: [
     {
