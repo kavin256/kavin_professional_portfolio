@@ -9,6 +9,8 @@ export const siteConfig: SiteConfig = {
   summary:
     'Senior Software Engineer with 6+ years of experience designing and delivering scalable, high-performance applications across FinTech, Open Banking, and SaaS. Skilled in building robust backend services, cloud-native architectures, and modern front-end solutions.',
 
+  calendarLink: 'https://calendar.app.google/UxgqisLHMkgJDhFx5',
+
   socialLinks: {
     github: 'https://github.com/kavin256',
     linkedin: 'https://www.linkedin.com/in/kavin-ranawella/',

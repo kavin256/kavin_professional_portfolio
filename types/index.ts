@@ -43,6 +43,7 @@ export interface SiteConfig {
   email: string
   profileImage: string
   summary: string
+  calendarLink: string
   socialLinks: SocialLinks
   skills: Skills
   experience: Experience[]

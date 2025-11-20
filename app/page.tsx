@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { Github, Linkedin, Facebook, Mail } from 'lucide-react'
+import { Github, Linkedin, Facebook, Mail, Calendar } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/lib/config/site-config'
 
 export default function About() {
@@ -57,6 +58,16 @@ export default function About() {
             aria-label="Email"
           >
             <Mail className="w-6 h-6" />
+          </a>
+        </div>
+
+        {/* Schedule Chat Button */}
+        <div className="mt-8">
+          <a href={siteConfig.calendarLink} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="gap-2">
+              <Calendar className="w-5 h-5" />
+              Schedule a Call
+            </Button>
           </a>
         </div>
       </div>
