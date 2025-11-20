@@ -1,7 +1,8 @@
 import type { SiteConfig } from '@/types'
 
 export const siteConfig: SiteConfig = {
-  name: 'Kavin Ranawella',
+  firstName: 'Kavin',
+  lastName: 'Ranawella',
   title: 'Senior Full Stack Engineer',
   email: 'kavin256@gmail.com',
   profileImage: '/profile-pic.jpg',

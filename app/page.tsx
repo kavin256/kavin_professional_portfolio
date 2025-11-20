@@ -20,7 +20,7 @@ export default function About() {
             />
           </div>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{siteConfig.name}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{siteConfig.firstName} {siteConfig.lastName}</h1>
         <p className="text-xl text-muted-foreground mb-6">{siteConfig.title}</p>
 
         {/* Social Links */}

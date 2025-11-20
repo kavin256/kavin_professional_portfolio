@@ -38,7 +38,8 @@ export interface Project {
 }
 
 export interface SiteConfig {
-  name: string
+  firstName: string
+  lastName: string
   title: string
   email: string
   profileImage: string

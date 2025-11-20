@@ -10,8 +10,8 @@ import { env } from '@/lib/config/env'
 export const metadata: Metadata = {
   metadataBase: new URL(env.siteUrl),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.title}`,
-    template: `%s | ${siteConfig.name}`,
+    default: `${siteConfig.firstName} ${siteConfig.lastName} | ${siteConfig.title}`,
+    template: `%s | ${siteConfig.firstName} ${siteConfig.lastName}`,
   },
   description: siteConfig.summary,
   keywords: [
@@ -21,21 +21,21 @@ export const metadata: Metadata = {
     ...siteConfig.skills.languages,
     ...siteConfig.skills.frameworks,
   ],
-  authors: [{ name: siteConfig.name, url: siteConfig.socialLinks.github }],
-  creator: siteConfig.name,
+  authors: [{ name: `${siteConfig.firstName} ${siteConfig.lastName}`, url: siteConfig.socialLinks.github }],
+  creator: `${siteConfig.firstName} ${siteConfig.lastName}`,
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: env.siteUrl,
-    title: `${siteConfig.name} | ${siteConfig.title}`,
+    title: `${siteConfig.firstName} ${siteConfig.lastName} | ${siteConfig.title}`,
     description: siteConfig.summary,
-    siteName: `${siteConfig.name}'s Portfolio`,
+    siteName: `${siteConfig.firstName} ${siteConfig.lastName}'s Portfolio`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${siteConfig.name} | ${siteConfig.title}`,
+    title: `${siteConfig.firstName} ${siteConfig.lastName} | ${siteConfig.title}`,
     description: siteConfig.summary,
-    creator: '@' + siteConfig.name.replace(/\s+/g, '').toLowerCase(),
+    creator: '@' + (siteConfig.firstName + siteConfig.lastName).toLowerCase(),
   },
   robots: {
     index: true,
@@ -47,6 +47,10 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.svg',
   },
 }
 
