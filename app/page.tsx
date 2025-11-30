@@ -1,8 +1,10 @@
 import Image from 'next/image'
-import { Github, Linkedin, Facebook, Mail, Calendar } from 'lucide-react'
+import Link from 'next/link'
+import { Github, Linkedin, Facebook, Mail, Calendar, ExternalLink, Youtube, FileText } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/lib/config/site-config'
+import { ROUTES } from '@/lib/constants/routes'
 
 export default function About() {
   return (
@@ -86,7 +88,7 @@ export default function About() {
             <h3 className="text-lg font-semibold text-foreground mb-3">Languages</h3>
             <div className="flex flex-wrap gap-2">
               {siteConfig.skills.languages.map((skill, index) => (
-                <Badge key={index}>{skill}</Badge>
+                <Badge key={index} variant="secondary">{skill}</Badge>
               ))}
             </div>
           </div>
@@ -94,7 +96,7 @@ export default function About() {
             <h3 className="text-lg font-semibold text-foreground mb-3">Frameworks & Tools</h3>
             <div className="flex flex-wrap gap-2">
               {siteConfig.skills.frameworks.map((skill, index) => (
-                <Badge key={index}>{skill}</Badge>
+                <Badge key={index} variant="secondary">{skill}</Badge>
               ))}
             </div>
           </div>
@@ -132,6 +134,62 @@ export default function About() {
                 {edu.institution} | {edu.period}
               </p>
               <p className="text-muted-foreground">{edu.details}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-4">Projects</h2>
+        <div className="space-y-6">
+          {siteConfig.projects.map((project, index) => (
+            <div key={index}>
+              <Link href={ROUTES.PROJECTS}>
+                <h3 className="text-lg font-semibold text-foreground hover:text-primary transition-colors cursor-pointer">{project.title}</h3>
+              </Link>
+              <p className="text-muted-foreground mb-3">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {project.technologies.map((tech, techIndex) => (
+                  <Badge key={techIndex} variant="secondary">{tech}</Badge>
+                ))}
+              </div>
+              {(project.github || project.youtube || project.link || project.docs) && (
+                <div className="flex flex-wrap gap-2">
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2">
+                        <Github className="w-4 h-4" />
+                        View Source Code
+                      </Button>
+                    </a>
+                  )}
+                  {project.docs && (
+                    <a href={project.docs} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2">
+                        <FileText className="w-4 h-4" />
+                        Docs
+                      </Button>
+                    </a>
+                  )}
+                  {project.youtube && (
+                    <a href={project.youtube} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2">
+                        <Youtube className="w-4 h-4" />
+                        Watch Demo
+                      </Button>
+                    </a>
+                  )}
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="gap-2">
+                        <ExternalLink className="w-4 h-4" />
+                        View Project
+                      </Button>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

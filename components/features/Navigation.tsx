@@ -16,9 +16,9 @@ export default function Navigation() {
             <NavLink href={ROUTES.HOME} isActive={pathname === ROUTES.HOME}>
               About
             </NavLink>
-            {/* <NavLink href={ROUTES.PROJECTS} isActive={pathname === ROUTES.PROJECTS}>
+            <NavLink href={ROUTES.PROJECTS} isActive={pathname === ROUTES.PROJECTS}>
               Projects
-            </NavLink> */}
+            </NavLink>
             {/* <div className="ml-2 pl-2 border-l border-border/40">
               <ThemeToggle />
             </div> */}

@@ -84,28 +84,13 @@ export const siteConfig: SiteConfig = {
 
   projects: [
     {
-      title: 'E-Commerce Platform',
+      title: 'Trails - Custom Offline-First Sync Engine',
       description:
-        'A full-stack e-commerce platform built with Next.js and Node.js. Features include user authentication, payment processing, and inventory management.',
-      technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
-    },
-    {
-      title: 'Task Management App',
-      description:
-        'A collaborative task management application with real-time updates. Built using React and WebSockets for seamless collaboration.',
-      technologies: ['React', 'WebSockets', 'MongoDB', 'Express'],
-    },
-    {
-      title: 'Weather Dashboard',
-      description:
-        'A responsive weather dashboard that displays current conditions and forecasts. Integrates with multiple weather APIs.',
-      technologies: ['React', 'TypeScript', 'Chart.js', 'REST APIs'],
-    },
-    {
-      title: 'Social Media Analytics Tool',
-      description:
-        'Analytics dashboard for tracking social media metrics across multiple platforms. Features data visualization and export capabilities.',
-      technologies: ['Python', 'Django', 'React', 'D3.js'],
+        'A custom-built synchronization engine enabling offline-first mobile applications with intelligent conflict resolution and cross-device data sync. Features "most recent change wins" conflict handling, soft-delete tracking, bandwidth optimization, and server-controlled timestamps. Demonstrated through a React Native travel planner app using local SQLite storage with automatic synchronization.',
+      technologies: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'SQLite'],
+      github: 'https://github.com/kavin256/trails',
+      youtube: 'https://www.youtube.com/watch?v=kaUuXtDIMiA',
+      docs: 'https://github.com/kavin256/trails#readme',
     },
   ],
 }

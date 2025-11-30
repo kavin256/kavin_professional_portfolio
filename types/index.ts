@@ -35,6 +35,8 @@ export interface Project {
   technologies: string[]
   link?: string
   github?: string
+  youtube?: string
+  docs?: string
 }
 
 export interface SiteConfig {
