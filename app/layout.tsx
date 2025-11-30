@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased">
         <ThemeProvider defaultTheme={defaultTheme}>
           <SkipToContent />
-          <Navigation />
+          {/* <Navigation /> */}
           <main id="main-content" className="min-h-screen" tabIndex={-1}>
             {children}
           </main>

@@ -1,10 +1,8 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { Github, Linkedin, Facebook, Mail, Calendar, ExternalLink, Youtube, FileText } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/lib/config/site-config'
-import { ROUTES } from '@/lib/constants/routes'
 
 export default function About() {
   return (
@@ -145,9 +143,7 @@ export default function About() {
         <div className="space-y-6">
           {siteConfig.projects.map((project, index) => (
             <div key={index}>
-              <Link href={ROUTES.PROJECTS}>
-                <h3 className="text-lg font-semibold text-foreground hover:text-primary transition-colors cursor-pointer">{project.title}</h3>
-              </Link>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{project.title}</h3>
               <p className="text-muted-foreground mb-3">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.technologies.map((tech, techIndex) => (
