@@ -26,7 +26,7 @@ export const siteConfig: SiteConfig = {
 
   skills: {
     languages: ['Java', 'TypeScript', 'JavaScript', 'Python'],
-    frameworks: ['React / React Native', 'Angular', 'Spring Boot', 'Node.js', 'Express.js', 'AWS (Lambda, EC2, S3)', 'Docker', 'Terraform'],
+    frameworks: ['React / React Native', 'Next.js', 'Angular', 'Spring Boot', 'Node.js', 'Express.js', 'AWS (Lambda, EC2, S3)', 'Docker', 'Terraform'],
   },
 
   experience: [
