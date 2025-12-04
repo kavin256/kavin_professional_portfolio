@@ -1,5 +1,11 @@
 import type { SiteConfig } from '@/types'
 
+/**
+ * Site configuration containing all personal information, experience, education, and projects.
+ * This centralized configuration makes it easy to manage portfolio content in one place.
+ *
+ * @see {@link SiteConfig} for type definitions
+ */
 export const siteConfig: SiteConfig = {
   firstName: 'Kavin',
   lastName: 'Ranawella',
@@ -63,7 +69,7 @@ export const siteConfig: SiteConfig = {
 
   education: [
     {
-      degree: 'PG Certificate in Mobile Application Development',
+      degree: 'Postgraduate Certificate in Mobile Application Development',
       institution: 'Fanshawe College, Canada',
       period: '2022 - 2023',
       details: 'Focused on modern mobile application development practices and technologies',
@@ -91,6 +97,13 @@ export const siteConfig: SiteConfig = {
       github: 'https://github.com/kavin256/trails',
       youtube: 'https://www.youtube.com/watch?v=kaUuXtDIMiA',
       docs: 'https://github.com/kavin256/trails#readme',
+    },
+    {
+      title: 'Next.js - Professional Portfolio Website',
+      description:
+        'A modern, clean portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a single-page resume layout with dark mode support, responsive design, and centralized configuration for easy customization. Demonstrates modern web development practices with server-side rendering, type safety, and component-based architecture.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui'],
+      github: 'https://github.com/kavin256/kavin_professional_portfolio',
     },
   ],
 }

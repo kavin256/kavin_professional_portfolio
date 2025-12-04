@@ -2,26 +2,31 @@
  * Type definitions for the portfolio application
  */
 
+/** Theme options for the application */
 export type Theme = 'dark' | 'light' | 'system'
 
+/** Social media links configuration */
 export interface SocialLinks {
   github: string
   linkedin: string
   facebook: string
 }
 
+/** Skills categorized by type */
 export interface Skills {
-  languages: string[]
-  frameworks: string[]
+  languages: readonly string[]
+  frameworks: readonly string[]
 }
 
+/** Work experience entry */
 export interface Experience {
   title: string
   company: string
   period: string
-  achievements: string[]
+  achievements: readonly string[]
 }
 
+/** Education entry */
 export interface Education {
   degree: string
   institution: string
@@ -29,16 +34,18 @@ export interface Education {
   details: string
 }
 
+/** Project entry with optional links */
 export interface Project {
   title: string
   description: string
-  technologies: string[]
+  technologies: readonly string[]
   link?: string
   github?: string
   youtube?: string
   docs?: string
 }
 
+/** Complete site configuration */
 export interface SiteConfig {
   firstName: string
   lastName: string
@@ -49,9 +56,9 @@ export interface SiteConfig {
   calendarLink: string
   socialLinks: SocialLinks
   skills: Skills
-  experience: Experience[]
-  education: Education[]
-  projects: Project[]
+  experience: readonly Experience[]
+  education: readonly Education[]
+  projects: readonly Project[]
 }
 
 export interface ThemeProviderProps {
