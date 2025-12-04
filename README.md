@@ -4,7 +4,7 @@ A modern, clean portfolio website built with Next.js, TypeScript, and Tailwind C
 
 ## Features
 
-- **About Page** (default route): Complete resume sections including:
+- **Resume Page** (default route): Complete resume sections including:
   - Header with name and title
   - Social media links (GitHub, LinkedIn, Facebook, Email)
   - About/Summary section
@@ -12,9 +12,7 @@ A modern, clean portfolio website built with Next.js, TypeScript, and Tailwind C
   - Experience section
   - Education section
 
-- **Projects Page**: Showcase of software engineering projects
-
-- **Modern Design**: Clean, responsive design with dark mode support
+- **Modern Design**: Clean, minimal single-page design with dark mode support
 
 ## Getting Started
 
@@ -36,7 +34,7 @@ Open [http://localhost:3001](http://localhost:3001) with your browser to see the
 
 ### Theme Configuration
 
-The default theme is set to **dark mode**. To change the default theme, edit `lib/theme-config.ts`:
+The default theme is set to **dark mode**. To change the default theme, edit `lib/config/theme-config.ts`:
 
 ```typescript
 export const defaultTheme: 'light' | 'dark' | 'system' = 'dark'
@@ -48,11 +46,9 @@ You can change it to:
 - `'light'` - Light theme
 - `'system'` - Follows system preference
 
-Users can toggle between light and dark themes using the theme toggle button in the navigation bar. The preference is saved in localStorage.
+### Update Personal Information
 
-### Update Personal Information and Projects
-
-All personal information and projects are centralized in `lib/site-config.ts`. Edit this file to update:
+All personal information is centralized in `lib/config/site-config.ts`. Edit this file to update:
 
 - Name and title
 - Profile image path
@@ -62,7 +58,6 @@ All personal information and projects are centralized in `lib/site-config.ts`. E
 - Skills (languages and frameworks)
 - Experience
 - Education
-- Projects
 
 This centralized configuration makes it easy to manage all your portfolio content in one place.
 
